@@ -10,6 +10,11 @@
 - greedy + DP + prefix/suffix analysis
 - 基準解＋差分最大化
 - 以上の複合体らしい。。
+- → 以下の問題を順に解くと良いらしい。
+- LeetCode 340 – Longest Substring with At Most K Distinct Characters（ウィンドウ基礎）
+- LeetCode 159 – At Most Two Distinct（2 種限定の直感磨き）
+- LeetCode 1004 – Max Consecutive Ones III（“at most k flips” 型で差分思考練習）
+
 
 # 2025-10-16
 ## 今日やったこと
