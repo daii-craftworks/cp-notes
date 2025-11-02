@@ -1,4 +1,21 @@
 # 学習ログ
+# 2025-11-02
+## 今日やったこと
+- LeetCode2257: 二次元配列の探索
+## 気付き
+for r in range(m):
+        on = False
+        for c in range(n):
+                if grid[r][c] == WALL:
+                    on = False
+                elif grid[r][c] == GUARD:
+                    on = True
+                else:
+                    if on:
+                        guarded[r][c] = True
+・このような形をとれば、捜査できる
+
+
 # 2025-11-01
 ## 今日やったこと
 - LeetCode3217: pythonの参照先の理解が必要な問題
