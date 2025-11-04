@@ -1,5 +1,17 @@
 # 学習ログ
-# 2025-11-02
+# 2025-11-04
+## 今日やったこと
+- LeetCode3318: 単純な問題
+## 気付き
+```
+辞書(d)のソートを複数のキーで
+d_sorted = sorted(d.items(), key=lambda kv: (kv[1], kv[0]), reverse=True)
+```
+
+
+
+
+# 2025-11-03
 ## 今日やったこと
 - LeetCode1578: 隣接要素の比較による一括最適化（One-pass greedy on consecutive groups）
 ## 気付き
