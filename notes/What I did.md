@@ -1,4 +1,40 @@
 # 学習ログ
+# 2025-11-07
+## 今日やったこと
+- LeetCode2528: ・最小値の最大化，差分配列
+## 気付き
+```
+⭐⭐⭐「最小値の最大化」「最大値の最小化」→ 二分探索を考える！
+def solve():
+    left, right = 最小値, 最大値
+    answer = left
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if can_achieve(mid):  # mid が達成可能か？
+            answer = mid
+            left = mid + 1    # もっと大きい値を試す
+        else:
+            right = mid - 1   # 小さい値にする
+    
+    return answer
+
+⭐⭐⭐差分配列（Difference Array） 
+範囲更新を O(1) で行う
+# 通常: O(範囲の長さ)
+for i in range(L, R+1):
+    arr[i] += value
+
+# 差分配列: O(1)
+diff[L] += value
+diff[R+1] -= value
+# 後で累積和を取る: O(n)
+
+**使いどころ:**
+- 範囲に一定値を加算/減算
+- 複数回の範囲更新 → 最後に累積和
+```
+
 # 2025-11-04
 ## 今日やったこと
 - LeetCode3318: 単純な問題
