@@ -1,4 +1,28 @@
 # 学習ログ
+# 2025-11-23
+## 今日やったこと
+- LeetCode1262: mod DP（余り DP） による「最大和を作る」
+## 気付き
+```
+部分集合の和について
+“和 % M が指定条件を満たす” ような最大／最小値を求めたいとき
+M が小さい（典型：M = 2, 3, 5 など）
+「和全体を全部列挙する DP（O(N * sum))」は大きすぎて無理
+→ **余りだけ持てば十分！**というケース
+(初期値　m = 3)
+dp = [0, -inf, -inf]
+for x in nums:
+    ndp = dp[:]
+    for r in 0..M-1:
+        if dp[r] is valid:
+            new_sum = dp[r] + x
+            nr = new_sum % M
+            ndp[nr] = max(ndp[nr], new_sum)
+
+    dp = ndp
+return dp[0]
+```
+
 # 2025-11-20
 ## 今日やったこと
 - LeetCode757: 区間 × 貪欲：各区間に少なくとも K 点を含める
